@@ -1,10 +1,20 @@
-import React, { Component } from "react";
+import React from "react";
+// import PropTypes from "prop-types";
 
-export const Footer = () => (
-	<footer className="footer mt-auto py-3 text-center">
-		<p>
-			Made with <i className="fa fa-heart text-danger" /> by{" "}
-			<a href="http://www.4geeksacademy.com">4Geeks Academy</a>
-		</p>
-	</footer>
-);
+//create your first component
+export function Footer() {
+	// const { title, body, buttonText, url, image } = props;
+	return (
+		<footer className="container-fluid bg-dark text-white py-3 text-center">
+			Copyright &copy;2020 - Johan Uribe
+		</footer>
+	);
+}
+
+// Card.propTypes = {
+// 	title: PropTypes.string,
+// 	body: PropTypes.string,
+// 	buttonText: PropTypes.string,
+// 	url: PropTypes.string,
+// 	image: PropTypes.string
+// };

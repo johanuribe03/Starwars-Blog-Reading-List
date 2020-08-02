@@ -1,15 +1,64 @@
 import React from "react";
-import rigoImage from "../../img/rigo-baby.jpg";
-import "../../styles/home.scss";
+// import { Navbar } from "../component/navbar.js";
+// import { Jumbo } from "./jumbo.js";
+import { Characters } from "../component/characters.js";
+// import { Footer } from "../component/footer.js";
 
-export const Home = () => (
-	<div className="text-center mt-5">
-		<h1>Hello Rigo!</h1>
-		<p>
-			<img src={rigoImage} />
-		</p>
-		<a href="#" className="btn btn-success">
-			If you see this green button, bootstrap is working
-		</a>
-	</div>
-);
+export default function Home() {
+	let characters = [
+		{
+			image: "https://via.placeholder.com/300",
+			title: "My Card",
+			body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla rutrum in metus quis pellentesque. ",
+			buttonText: "View",
+			url: "#"
+		},
+
+		{
+			image: "https://via.placeholder.com/300",
+			title: "My Card",
+			body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla rutrum in metus quis pellentesque. ",
+			buttonText: "View",
+			url: "#"
+		},
+		{
+			image: "https://via.placeholder.com/300",
+			title: "My Card",
+			body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla rutrum in metus quis pellentesque. ",
+			buttonText: "View",
+			url: "#"
+		},
+		{
+			image: "https://via.placeholder.com/300",
+			title: "My Card",
+			body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla rutrum in metus quis pellentesque. ",
+			buttonText: "View",
+			url: "#"
+		},
+		{
+			image: "https://via.placeholder.com/300",
+			title: "My Card",
+			body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla rutrum in metus quis pellentesque. ",
+			buttonText: "View",
+			url: "#"
+		}
+	];
+
+	return (
+		<div className="container-fluid">
+			<div className="row">
+				{characters.map((card, index) => (
+					<div className="col-3" key={index}>
+						<Characters
+							tittle={card.title}
+							body={card.body}
+							buttonText={card.buttonText}
+							url={card.url}
+							image={card.image}
+						/>
+					</div>
+				))}
+			</div>
+		</div>
+	);
+}
