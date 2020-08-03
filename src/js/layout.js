@@ -7,6 +7,8 @@ import injectContext from "./store/appContext";
 
 import { Navbar } from "./component/navbar.js";
 import { Footer } from "./component/footer.js";
+import { Characters } from "./component/characters";
+// import { Planets } from "./component/planets.js";
 
 //create your first component
 const Layout = () => {
@@ -19,7 +21,9 @@ const Layout = () => {
 			<BrowserRouter basename={basename}>
 				<ScrollToTop>
 					<Navbar />
-
+					{/* <Planets /> */}
+					<h1>Characters</h1>
+					{/* <div className="scrolling-wrapper"> */}
 					<Switch>
 						<Route exact path="/">
 							<Home />
@@ -28,6 +32,7 @@ const Layout = () => {
 							<h1>Not found!</h1>
 						</Route>
 					</Switch>
+					{/* </div> */}
 					<Footer />
 				</ScrollToTop>
 			</BrowserRouter>
